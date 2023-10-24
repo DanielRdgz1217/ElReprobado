@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
-import './presentation/chat/chat_screen.dart';
+import 'package:provider/provider.dart';
 import './config/theme/app_theme.dart';
+import './presentation/providers/chats/chat_provider.dart';
+import 'presentation/screens/chat/chat_screen.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: AppTheme(selectedColor: 3).theme(),
-      home: const ChatScreen(),
+    return MultiProvider(
+      providers: [ChangeNotifierProvider(create: (_) => ChatProvider())],
+      child: MaterialApp(
+        title: 'yes no App',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme(selectedColor: 1).theme(),
+        home: const ChatScreen(),
+      ),
     );
   }
 }
-
-

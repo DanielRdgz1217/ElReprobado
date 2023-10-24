@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../domain/dtos/message.dart';
-import '../providers/chats/chat_provider.dart';
-import '../widgets/chat/message_bubble.dart';
-import '../widgets/shared/message_field_box.dart';
-import '../widgets/herBar/her_presentation.dart';
+import '../../../domain/dtos/message.dart';
+import '../../providers/chats/chat_provider.dart';
+import '../../widgets/chat/message_bubble.dart';
+import '../../widgets/shared/message_field_box.dart';
+import '../../widgets/herBar/her_presentation.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -13,9 +13,9 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       appBar: HerPresentation(
-        nombre: 'Mon amour',
+        nombre: 'Madonna',
         urlAvatar:
-            'https://hips.hearstapps.com/hmg-prod/images/actress-emma-watson-attends-the-beauty-and-the-beast-new-news-photo-1644853447.jpg?crop=0.668xw:1.00xh;0.189xw,0&resize=1200:*',
+            'https://www.tn23.tv/wp-content/uploads/2023/07/Madonna-agradece-a-su-familia-el-apoyo-durante-su-enfermedad--256x256.jpg',
       ),
       body: ChatView(),
     );
