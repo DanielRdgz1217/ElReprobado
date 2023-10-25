@@ -14,6 +14,11 @@ class ChatProvider extends ChangeNotifier {
     moveScrollToBottom();
   }
 
+  Future<void> askForQuestionSign() async {
+    final newMessage = Message(text: 'Por favor, termina tu pregunta con "?"', fromWho: FromWho.hers);
+    messageList.add(newMessage);
+  }
+
   Future<void> sendMessage(String text) async {
     if (text.isEmpty) return;
     final neMessage = Message(text: text, fromWho: FromWho.me);
@@ -21,6 +26,8 @@ class ChatProvider extends ChangeNotifier {
 
     if (text.endsWith('?')) {
       herResponse();
+    } else {
+      askForQuestionSign();
     }
 //notifica a todos para su actualización de datos
     notifyListeners();

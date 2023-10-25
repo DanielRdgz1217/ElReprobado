@@ -22,9 +22,13 @@ class HerMessageBubble extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 5),
-        _ImageBubble(urlGif: urlGif),
-        const SizedBox(height: 10),
+        urlGif != null ? Column(
+          children: [
+            const SizedBox(height: 5),
+            _ImageBubble(urlGif: urlGif),
+            const SizedBox(height: 10)
+          ],
+        ) : const SizedBox(height: 10),
       ],
     );
   }

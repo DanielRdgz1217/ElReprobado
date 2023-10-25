@@ -13,9 +13,9 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       appBar: HerPresentation(
-        nombre: 'Madonna',
+        nombre: 'Mon amour',
         urlAvatar:
-            'https://www.tn23.tv/wp-content/uploads/2023/07/Madonna-agradece-a-su-familia-el-apoyo-durante-su-enfermedad--256x256.jpg',
+            'https://hips.hearstapps.com/hmg-prod/images/actress-emma-watson-attends-the-beauty-and-the-beast-new-news-photo-1644853447.jpg?crop=0.668xw:1.00xh;0.189xw,0&resize=1200:*',
       ),
       body: ChatView(),
     );
