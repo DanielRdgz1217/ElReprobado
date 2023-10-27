@@ -47,6 +47,7 @@ class ChatView extends StatelessWidget {
               ),
             ),
             MessageFieldBox(onValue: chatProvider.sendMessage),
+            const SizedBox(height: 5)
           ],
         ),
       ),

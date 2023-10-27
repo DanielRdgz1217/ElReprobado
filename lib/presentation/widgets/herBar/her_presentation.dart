@@ -21,6 +21,13 @@ class HerPresentation extends StatelessWidget implements PreferredSizeWidget {
         ),
       ),
       title: Text(nombre),
+      backgroundColor: Theme.of(context).secondaryHeaderColor,
+      shape: Border(
+        bottom: BorderSide(
+          color: Theme.of(context).dividerColor,
+          width: 1,
+        ),
+      ),
       centerTitle: false,
     );
   }
