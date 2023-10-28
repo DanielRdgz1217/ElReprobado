@@ -11,13 +11,17 @@ class ChatScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       appBar: HerPresentation(
         nombre: 'Mon amour',
         urlAvatar:
             'https://hips.hearstapps.com/hmg-prod/images/actress-emma-watson-attends-the-beauty-and-the-beast-new-news-photo-1644853447.jpg?crop=0.668xw:1.00xh;0.189xw,0&resize=1200:*',
+        clearFunction: () {
+          final chatProvider = context.read<ChatProvider>();
+          chatProvider.clearMessages();
+        }
       ),
-      body: ChatView(),
+      body: const ChatView(),
     );
   }
 }

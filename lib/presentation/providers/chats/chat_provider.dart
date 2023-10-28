@@ -19,6 +19,11 @@ class ChatProvider extends ChangeNotifier {
     messageList.add(newMessage);
   }
 
+  void clearMessages() {
+    messageList.clear();
+    notifyListeners();
+  }
+
   Future<void> sendMessage(String text) async {
     if (text.isEmpty) return;
     final neMessage = Message(text: text, fromWho: FromWho.me);
